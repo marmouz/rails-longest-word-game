@@ -1,0 +1,13 @@
+<h1>RESULT</h1>
+<%= params[:word] %>
+<% if @english %>
+  <% if @include %>
+  <p><strong>Congratulations!</strong><%= @word %>is a valid english word!</p>
+  <% else %>
+  <p>Sorry but <strong><%= @word %></strong> can be built with <%= @letter_post %></p>
+  <% end %>
+<% else %>
+<p>Sorry but <strong><%= @word %></strong> doesnt seem to be a valid english word</p>
+<%  end %>
+
+<%= link_to "Play again", new_path %>
